@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = typeof window !== 'undefined' && window.fetch ? window.fetch.bind(window) : null;
+          var currentFetch = originalFetch;
+          if (typeof window !== 'undefined') {
+            Object.defineProperty(window, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function() {
+                return currentFetch;
+              },
+              set: function(fn) {
+                currentFetch = fn;
+              }
+            });
+          }
+        } catch (e) {
+          console.warn('Polyfill fetch setter notice:', e);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepLens | AI-Powered Indian Standards & BIS Services (SIH 2026)</title>
+    <meta name="description" content="PrepLens (SIH26107 / Team 159008) - AI-Powered Assistant for Indian Standards (IS), BIS certification schemes, testing laboratories, and consumer services." />
+    <meta property="og:title" content="PrepLens | AI-Powered Indian Standards & BIS Services Assistant" />
+    <meta property="og:description" content="PrepLens - Smart India Hackathon 2026 (SIH26107). Grounded RAG AI for MSMEs, Startups & Consumers." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-orange-500/30 selection:text-orange-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

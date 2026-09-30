@@ -1,0 +1,8 @@
+{
+  "name": "BIS-SARTHI: AI-Powered Indian Standards & BIS Services Assistant",
+  "description": "Smart India Hackathon 2026 (SIH26107) by Team PrepLens. Evidence-grounded RAG conversational AI assistant for Indian Standards (IS), BIS certification schemes, testing laboratories, and consumer services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
